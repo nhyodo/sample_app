@@ -1,0 +1,108 @@
+/*
+CSSルールでは一般に、クラス、id、HTMLタグ、またはそれらの組み合わせ、のいずれかを指定します。
+そしてその後ろにスタイリングコマンドのリストを記述します。
+*/
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
+body {
+  padding-top: 60px; // 上パディングを指定する
+}
+
+section {
+  overflow: auto;
+  // overflow：ボックスの範囲内に内容が入りきらない場合に、はみ出た部分の表示の仕方を指定する際に使用
+  // auto：ブラウザに依存します（一般的にはスクロールして見られるようになります）
+}
+
+textarea {
+// Webページ上にテキストエリアを配置
+  resize: vertical;
+  // 縦のみリサイズ可能
+}
+
+.center {
+// 先頭に.がある→クラス
+// ブロックコンテナ内の行の揃え位置・均等割付を指定
+  text-align: center;
+  // インラインレベルのコンテンツは、ラインボックスの中央に配置される
+  h1 {
+   // h1は.centerのルールを継承している
+   margin-bottom: 10px;
+   // 下の余白を設定
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: $gray-light;
+  a {
+    color: #555;
+    &:hover {
+      color: #222;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
